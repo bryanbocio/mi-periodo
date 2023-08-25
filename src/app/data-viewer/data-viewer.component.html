@@ -1,0 +1,34 @@
+<div class="container">
+    <h4>Empiezas a beberte el medicamento el {{returnStarterDate() | date}}</h4>
+</div>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div>
+            <div *ngFor="let dateForShow of dates; let i = index">
+                <div *ngIf="(i + 1) % 2==0">
+                    <div class="m-2">
+                        <div [ngClass]="{'colorcito': i === 0}" class="card" style="width: 18rem;">
+                            <img src="../../assets/pill.png" class="card-img-top img-fluid bg-info" alt="">
+                            <div class="card-body">
+                              <h5 class="card-title">{{dateForShow}}</h5>
+                              <p class="card-text text-success">Comenzar de beberse el medicamento</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div *ngIf="(i + 1) % 2!=0">
+                    <div class="m-2">
+                        <div [ngClass]="{'color-changer': i === 0}" class="card" style="width: 18rem;">
+                            <img  src="https://img.freepik.com/premium-vector/stop-red-glossy-road-sign-isolated-white_88653-79.jpg?w=2000" class="card-img-top img-fluid bg-info" alt="">
+                            <div class="card-body">
+                              <h5 class="card-title">{{dateForShow}}</h5>
+                              <p class="card-text text-danger">Último día de beberse el medicamento</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

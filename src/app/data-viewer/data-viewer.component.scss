@@ -1,0 +1,71 @@
+ 
+ .icon-box {
+    padding: 50px 20px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    text-align: center;
+    height: 200px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+   .icon {
+    position: absolute;
+    top: -36px;
+    left: calc(50% - 36px);
+    transition: 0.2s;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 72px;
+    height: 72px;
+    background: #1CB249;
+  }
+  
+   .icon i {
+    color: #fff;
+    font-size: 24px;
+    line-height: 0;
+  }
+  
+   .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+   .title a {
+    color: #343a40;
+  }
+  
+   .icon-box:hover .icon {
+    background: #fff;
+    border: 2px solid #1CB249;
+  }
+  
+   .icon-box:hover .icon i {
+    color: #1CB249;
+  }
+  
+   .icon-box:hover .title a {
+    color: #1CB249;
+  }
+  
+   .description {
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  .card{
+    transition: background-color 0.5s;
+  }
+
+  .color-changer{
+    background-color: gold;
+  }
