@@ -1,5 +1,5 @@
 <div class="container">
-    <h4>Empiezas a beberte el medicamento el {{returnStarterDate() | date}}</h4>
+    <h4>Empiezas a beberte el medicamento el {{returnStarterDate() | date : 'short'}}</h4>
 </div>
 <div class="container">
     <div class="d-flex justify-content-center">
@@ -8,7 +8,7 @@
                 <div *ngIf="(i + 1) % 2==0">
                     <div class="m-2">
                         <div [ngClass]="{'colorcito': i === 0}" class="card" style="width: 18rem;">
-                            <img src="../../assets/pill.png" class="card-img-top img-fluid bg-info" alt="">
+                            <img src="assets/pill.png" class="card-img-top img-fluid bg-info" alt="">
                             <div class="card-body">
                               <h5 class="card-title">{{dateForShow}}</h5>
                               <p class="card-text text-success">Comenzar de beberse el medicamento</p>

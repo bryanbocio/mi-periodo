@@ -5,10 +5,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-viewer.component.scss']
 })
 export class DataViewerComponent implements OnInit {
-  principalDate: Date = new Date("08-28-2023")
+  principalDate: any;
   dates: String[] = [];
 
   ngOnInit(): void {
+    this.principalDate= new Date(Date.now());
     this.calculateDaysForTakingThePill()
   }
 
@@ -16,30 +17,31 @@ export class DataViewerComponent implements OnInit {
 
     for (let actualMonth = this.principalDate.getMonth() + 1; actualMonth <= 12; actualMonth++) {
 
-      let days = this.principalDate.getDate();
+      if(this.principalDate != undefined || this.principalDate != null){
 
-      this.principalDate.setDate(days + 21);
+          let days = this.principalDate.getDate();
 
-      this.addADateIntoArray(this.principalDate)
-
-      this.principalDate.setDate(this.principalDate.getDate() + 8);
-
-      this.addADateIntoArray(this.principalDate)
-
-    }
+          this.principalDate.setDate(days + 21);
     
+          this.addADateIntoArray(this.principalDate)
+    
+          this.principalDate.setDate(this.principalDate.getDate() + 8);
+    
+          this.addADateIntoArray(this.principalDate)
+      }
+    }
   }
-
 
   addADateIntoArray(dateValue: Date): void {
-    if (new Date() <= dateValue) {
-      this.dates.push(dateValue.toLocaleDateString())
+    if(dateValue != null){
+      if (new Date() <= dateValue) {
+        this.dates.push(dateValue.toLocaleDateString())
+      }
     }
   }
-
-
+  
   returnStarterDate(): Date {
-    return new Date("08-29-2023");
+    return new Date(Date.now());
   }
 
 
