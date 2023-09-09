@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-viewer.component.scss']
 })
 export class DataViewerComponent implements OnInit {
-  principalDate: any;
+  principalDate: any= new Date();
   dates: String[] = [];
 
   ngOnInit(): void {
-    this.principalDate= new Date(Date.now());
+    this.principalDate.setDate(28);
+    this.principalDate.setMonth(7);
+    this.principalDate.setFullYear(2023);
     this.calculateDaysForTakingThePill()
   }
 
@@ -39,9 +41,10 @@ export class DataViewerComponent implements OnInit {
       }
     }
   }
-  
+
+//la fecha es menos uno
   returnStarterDate(): Date {
-    return new Date(Date.now());
+    return new Date("2023-08-30");
   }
 
 
