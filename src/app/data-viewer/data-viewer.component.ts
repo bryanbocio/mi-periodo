@@ -36,9 +36,7 @@ export class DataViewerComponent implements OnInit {
 
   addADateIntoArray(dateValue: Date): void {
     if(dateValue != null){
-      if (new Date() <= dateValue) {
         this.dates.push(dateValue.toLocaleDateString())
-      }
     }
   }
 
